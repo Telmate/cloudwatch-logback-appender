@@ -20,7 +20,7 @@
 
     <groupId>io.github.dibog</groupId>
     <artifactId>cloudwatch-logback-appender</artifactId>
-    <version>1.0.7-SNAPSHOT</version>
+    <version>1.0.6-almson</version>
 
 	<name>cloudwatch-logback-appender</name>
 	<description>Logback Appender which uses stores the log entries in ASW Cloudwatch logs.</description>
@@ -98,7 +98,7 @@
                 </executions>
             </plugin>
 
-            <plugin>
+<!--            <plugin>
 
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
@@ -118,9 +118,9 @@
                         <version>1.9.5</version>
                     </dependency>
                 </dependencies>
-            </plugin>
+            </plugin>-->
 
-            <plugin>
+<!--            <plugin>
 
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
@@ -128,12 +128,12 @@
                 <extensions>true</extensions>
 
                 <configuration>
-                    <serverId>ossrh</serverId>
+                    <serverId>central</serverId>
                     <nexusUrl>https://oss.sonatype.org/</nexusUrl>
                     <autoReleaseAfterClose>true</autoReleaseAfterClose>
                 </configuration>
 
-            </plugin>
+            </plugin>-->
 
             <plugin>
 
@@ -163,23 +163,23 @@
 
     <distributionManagement>
 
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
+<!--        <snapshotRepository>
+            <id>central</id>
+            <url>https://maven.almson.net/artifactory/libs-release</url>
+        </snapshotRepository>-->
 
         <repository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+            <id>central</id>
+            <url>https://maven.almson.net/artifactory/libs-release</url>
         </repository>
     </distributionManagement>
 
-    <scm>
+<!--    <scm>
         <connection>scm:git:git://github.com/dibog/cloudwatch-logback-appender.git</connection>
         <developerConnection>scm:git:git@github.com:dibog/cloudwatch-logback-appender.git</developerConnection>
         <url>https://github.com/dibog/cloudwatch-logback</url>
 		<tag>HEAD</tag>
-    </scm>
+    </scm>-->
 	
 	<profiles>
 
